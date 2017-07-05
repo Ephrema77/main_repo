@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="89463861-d8f8-42b4-8777-7bcbb673e5fa" activeEnvironment="Default" name="cardprofile" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c1d27397-480b-404f-a215-a856ef05c892" wsaVersion="NONE" name="cardprofileSOAP" type="wsdl" bindingName="{http://www.carftsoftware.com/cardprofile/}cardprofileSOAP" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/postf/IBM/IntegrationToolkit90/workspace/cardprofile/cardprofile.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\postf\IBM\IntegrationToolkit90\workspace\cardprofile\cardprofile.wsdl"><con:part><con:url>file:\C:\Users\postf\IBM\IntegrationToolkit90\workspace\cardprofile\cardprofile.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="cardprofile" targetNamespace="http://www.carftsoftware.com/cardprofile/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.carftsoftware.com/cardprofile/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="cardprofile_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="cardprofileSOAP" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.carftsoftware.com/cardprofile/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+      <xsd:include schemaLocation="cardprofile_InlineSchema1.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="setNameRequest">
+    <wsdl:part element="tns:setName" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="setNameResponse">
+    <wsdl:part element="tns:setNameResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="setAddressRequest">
+    <wsdl:part element="tns:setAddress" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="setAddressResponse">
+    <wsdl:part element="tns:setAddressResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="setCardInfoRequest">
+    <wsdl:part element="tns:setCardInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="setCardInfoResponse">
+    <wsdl:part element="tns:setCardInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="cardprofile">
+    <wsdl:operation name="setName">
+      <wsdl:input message="tns:setNameRequest"/>
+      <wsdl:output message="tns:setNameResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="setAddress">
+      <wsdl:input message="tns:setAddressRequest"/>
+      <wsdl:output message="tns:setAddressResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="setCardInfo">
+      <wsdl:input message="tns:setCardInfoRequest"/>
+      <wsdl:output message="tns:setCardInfoResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="cardprofileSOAP" type="tns:cardprofile">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="setName">
+      <soap:operation soapAction="http://www.carftsoftware.com/cardprofile/setName"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAddress">
+      <soap:operation soapAction="http://www.carftsoftware.com/cardprofile/setAddress"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCardInfo">
+      <soap:operation soapAction="http://www.carftsoftware.com/cardprofile/setCardInfo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="cardprofile">
+    <wsdl:port binding="tns:cardprofileSOAP" name="cardprofileSOAP">
+      <soap:address location="http://localhost:7800/cardprofile"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\postf\IBM\IntegrationToolkit90\workspace\cardprofile\cardprofile_InlineSchema1.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.carftsoftware.com/cardprofile/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.carftsoftware.com/cardprofile/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element ibmSchExtn:docRoot="true" name="setName">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="firstName" type="xsd:string"/>
+        <xsd:element name="lastName" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="setNameResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="fullname" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="setAddress">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="street" type="xsd:string"/>
+        <xsd:element name="city" type="xsd:string"/>
+        <xsd:element name="state" type="xsd:string"/>
+        <xsd:element name="zip" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="setAddressResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="state" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="setCardInfo">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cardnumber" type="xsd:string"/>
+        <xsd:element name="expirationdate" type="xsd:string"></xsd:element>
+        <xsd:element name="securitycode" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="setCardInfoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="out" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7800/cardprofile</con:endpoint></con:endpoints><con:operation id="1a4e12ab-6c14-4095-8362-5e7e9943723d" isOneWay="false" action="http://www.carftsoftware.com/cardprofile/setAddress" name="setAddress" bindingOperationName="setAddress" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="afdf45f8-c5d8-4333-910e-88d7af159352" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/cardprofile</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:car="http://www.carftsoftware.com/cardprofile/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <car:setAddress>\r
+         <street>5manger</street>\r
+         <city>rosedale</city>\r
+         <state>MD</state>\r
+         <zip>21237</zip>\r
+      </car:setAddress>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.carftsoftware.com/cardprofile/setAddress"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1ce3914d-963b-4a6e-a814-a03f20e1b39c" isOneWay="false" action="http://www.carftsoftware.com/cardprofile/setCardInfo" name="setCardInfo" bindingOperationName="setCardInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c09e02b9-e7ae-427d-adc9-75136786106b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/cardprofile</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:car="http://www.carftsoftware.com/cardprofile/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <car:setCardInfo>\r
+         <cardnumber>?</cardnumber>\r
+         <expirationdate>?</expirationdate>\r
+         <securitycode>?</securitycode>\r
+      </car:setCardInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.carftsoftware.com/cardprofile/setCardInfo"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="39b1b351-03a2-45aa-8562-ed9bb2fd3964" isOneWay="false" action="http://www.carftsoftware.com/cardprofile/setName" name="setName" bindingOperationName="setName" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e7e2d050-b0cb-400e-8414-fb9abec79bba" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/cardprofile</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:car="http://www.carftsoftware.com/cardprofile/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <car:setName>\r
+         <firstName>?</firstName>\r
+         <lastName>?</lastName>\r
+      </car:setName>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.carftsoftware.com/cardprofile/setName"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
